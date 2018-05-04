@@ -14,8 +14,8 @@ namespace AspNetCoreWebServiceTest.Controllers
         }
 
         [Theory]
-        [InlineData(null, "Hello !")]
-        [InlineData("", "Hello !")]
+        [InlineData(null, "Hello  !")]
+        [InlineData("", "Hello  !")]
         [InlineData("AWS CodeStar", "Hello AWS CodeStar!")]
         public void InputParamGetResponseTest(string inputValue, string expectedOutput)
         {
@@ -33,8 +33,8 @@ namespace AspNetCoreWebServiceTest.Controllers
         }
 
         [Theory]
-        [InlineData(null, "Hello !")]
-        [InlineData("", "Hello !")]
+        [InlineData(null, "Hello  !")]
+        [InlineData("", "Hello  !")]
         [InlineData("AWS CodeStar", "Hello AWS CodeStar!")]
         public void InputParamPostResponseTest(string inputValue, string expectedOutput)
         {
