@@ -10,13 +10,13 @@ namespace AspNetCoreWebServiceTest.Controllers
         {
             HelloController controller = new HelloController();
             var response = controller.Get().Value as Response;
-            Assert.Equal("Hi World!", response.output);
+            Assert.Equal("Hello World!", response.output);
         }
 
         [Theory]
-        [InlineData(null, "Hi !")]
-        [InlineData("", "Hi !")]
-        [InlineData("AWS CodeStar", "Hi AWS CodeStar!")]
+        [InlineData(null, "Hello  !")]
+        [InlineData("", "Hello  !")]
+        [InlineData("AWS CodeStar", "Hello AWS CodeStar!")]
         public void InputParamGetResponseTest(string inputValue, string expectedOutput)
         {
             HelloController controller = new HelloController();
@@ -29,13 +29,13 @@ namespace AspNetCoreWebServiceTest.Controllers
         {
             HelloController controller = new HelloController();
             var response = controller.Post().Value as Response;
-            Assert.Equal("Hi World!", response.output);
+            Assert.Equal("Hello World!", response.output);
         }
 
         [Theory]
-        [InlineData(null, "Hi !")]
-        [InlineData("", "Hi !")]
-        [InlineData("AWS CodeStar", "Hi AWS CodeStar!")]
+        [InlineData(null, "Hello  !")]
+        [InlineData("", "Hello  !")]
+        [InlineData("AWS CodeStar", "Hello AWS CodeStar!")]
         public void InputParamPostResponseTest(string inputValue, string expectedOutput)
         {
             HelloController controller = new HelloController();
