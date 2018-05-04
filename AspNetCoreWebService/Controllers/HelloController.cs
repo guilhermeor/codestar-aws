@@ -5,10 +5,10 @@ namespace AspNetCoreWebService.Controllers
     [Route("/")]
     public class HelloController : Controller
     {
-        private const string MESSAGE_FORMAT = "Hello {0}!";
+        private const string MESSAGE_FORMAT = "Hi {0}!";
 
         [HttpGet]
-        public JsonResult Get([FromQuery] string name = "World!!!")
+        public JsonResult Get([FromQuery] string name = "World!")
         {
             return Json(new Response
             {
@@ -17,7 +17,7 @@ namespace AspNetCoreWebService.Controllers
         }
 
         [HttpPost]
-        public JsonResult Post([FromBody]string name = "World!!")
+        public JsonResult Post([FromBody]string name = "World!")
         {
             return Json(new Response
             {
